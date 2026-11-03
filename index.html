@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#05080d" />
+    <title>STΩMs | 2B Entertainment</title>
+    <meta name="description" content="STΩMs bei 2B Entertainment: die App als eingebetteter Hugging-Face-Space." />
+    <link rel="canonical" href="https://2b-entertainment.com/stoms/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://2btainment-stoms.hf.space" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260824a" />
+    <link rel="stylesheet" href="/spulo/spulo.css?v=20260814a" />
+    <link rel="stylesheet" href="/stoms/fx/fx.css?v=20261103a" />
+    <style>.fx-page { --fx-poster: url("https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-poster.webp"); --fx-poster-sm: url("https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-poster-sm.webp"); }</style>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="2B Entertainment" />
+    <meta property="og:title" content="STΩMs | 2B Entertainment" />
+    <meta property="og:description" content="STΩMs — direkt eingebettet bei 2B Entertainment." />
+    <meta property="og:url" content="https://2b-entertainment.com/stoms/" />
+    <meta property="og:image" content="https://2b-entertainment.com/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!--
+      Credits / Lizenzen:
+      Hintergrundvideo „Abyss“ + Poster: eigene Assets von 2Btainment (Rob Boss), aus HF Space 2Btainment/stoms.
+      Keta-Matrix + Video-Shader: eigene WebGL-Shader aus STΩMs (assets/matrix.js, matrix2d.js, loop.js, videobg.js), keine Fremdbibliothek.
+      Schriften Space Grotesk, Syne – SIL Open Font License 1.1 (Google Fonts).
+      Siehe https://huggingface.co/spaces/2Btainment/stoms/blob/main/CREDITS.md
+    -->
+  </head>
+  <body class="spulo-page fx-page">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="2B Entertainment Home">
+          <img class="brand-mark-img" src="/assets/2b-logo.webp" alt="" width="120" height="80" />
+          <span>Entertainment</span>
+        </a>
+        <nav class="nav" data-nav aria-label="Hauptnavigation">
+          <a href="/">Home</a>
+          <a href="/artists/">Artists</a>
+          <a href="/2b-tube/">2B-Tube</a>
+          <a href="/2bfy/">2Bfy</a>
+          <a href="/radio/">Radio</a>
+          <a href="/games/">Games</a>
+          <a href="/spulo/">Spulo</a>
+          <a href="/stoms/" class="active" aria-current="page">STΩMs</a>
+          <a href="/veloura/">Veloura</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+        <div class="fx-actions">
+          <button class="fx-btn" type="button" data-fx-fullscreen hidden aria-pressed="false" aria-label="STΩMs im Vollbild anzeigen" title="Vollbild">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="fx-lbl">Vollbild</span>
+          </button>
+          <a class="fx-btn" href="https://huggingface.co/spaces/2Btainment/stoms" target="_blank" rel="noopener noreferrer" aria-label="App separat öffnen (neues Fenster)" title="App separat öffnen"><span class="fx-lbl">App separat öffnen</span> ↗</a>
+          <details class="fx-info">
+            <summary class="fx-btn" aria-label="Hinweise zur App" title="Hinweise">i</summary>
+            <div class="fx-info-panel" role="note">
+              <strong>Keine 2B-Anmeldung</strong>Die App läuft extern im eingebetteten Hugging-Face-Space.
+              <strong>Kaltstart möglich</strong>Schläft der Space, braucht er beim ersten Aufruf einen Moment zum Starten.
+              <strong>Externer Dienst</strong>Für Verfügbarkeit und Verarbeitung gelten zusätzlich die Bedingungen des App-Anbieters.
+              <small>Video „Abyss“ &amp; Matrix: STΩMs · 2Btainment</small>
+            </div>
+          </details>
+        </div>
+        <button class="menu-toggle" data-menu-toggle aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+
+      <main id="main-content" class="fx-stage" data-fx-stage aria-label="Eingebettete STΩMs-App">
+        <h1 class="visually-hidden">STΩMs</h1>
+        <div class="fx-loader" aria-hidden="true"><i></i><strong>STΩMs</strong><span>App wird geladen – nach einem Kaltstart kann das einen Moment dauern.</span></div>
+        <iframe
+          src="https://2btainment-stoms.hf.space/"
+          title="STΩMs"
+          loading="eager"
+          referrerpolicy="no-referrer"
+          sandbox="allow-forms allow-modals allow-popups allow-same-origin allow-scripts allow-downloads"
+          allow="clipboard-read; clipboard-write; microphone; autoplay; fullscreen"
+          onload="this.parentNode.classList.add('is-loaded')"
+        ></iframe>
+      </main>
+    </div>
+    <script>window.__fxConfig = { video: { grade: 1, poster: "https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-poster.webp", posterSm: "https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-poster-sm.webp",
+          sources: { "720": [["https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-720.webm", "video/webm"], ["https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-720.mp4", "video/mp4"]],
+                     "480": [["https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-480.webm", "video/webm"], ["https://huggingface.co/spaces/2Btainment/stoms/resolve/main/assets/abyss-480.mp4", "video/mp4"]] } } };</script>
+    <script type="module" src="/stoms/fx/fx.js?v=20261103a"></script>
+    <script src="/script.js?v=20261019c"></script>
+  </body>
+</html>
